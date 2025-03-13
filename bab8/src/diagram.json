@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "author": "tomi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -35.61,
+      "left": -141.49,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -119.92,
+      "left": -79.8,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -118.47,
+      "left": -50.75,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -119.94,
+      "left": -17.55,
+      "attrs": {
+        "color": "green"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX0",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "led1:A",
+      "esp:D2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led1:C",
+      "esp:GND.1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led2:A",
+      "esp:D4",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led2:C",
+      "esp:GND.1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led3:C",
+      "esp:GND.1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led3:A",
+      "esp:D12",
+      "green",
+      [
+        "v0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
